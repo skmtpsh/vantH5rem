@@ -1,0 +1,185 @@
+.theme-default {
+  // 顶栏右侧
+  .ps-theme-header {
+    .ps-header-right {
+      .btn-text {
+        color: $theme-header-item-color;
+        &.can-hover {
+          &:hover {
+            color: $theme-header-item-color-hover;
+            background: $theme-header-item-background-color-hover;
+          }
+        }
+      }
+    }
+  }
+  .ps-layout-mask {
+    @extend %full;
+    background: $theme-bg-mask;
+    color: #FFF; font-size: 14px; margin-bottom: 10px;
+    z-index: 3;
+  }
+  // 背景图片和遮罩
+  .ps-layout-aside-content {
+    background-color: $theme-bg-color;
+  }
+  // [布局] 顶栏下面
+  .ps-theme-container {
+    // 侧边栏
+    .ps-theme-container-aside {
+      // [菜单] 正常状态
+      .el-menu {
+        .el-menu-item {
+          color: $theme-aside-item-color;
+          background: $theme-aside-item-background-color;
+          i {
+            color: $theme-aside-item-color;
+          }
+          &:hover {
+            color: $theme-aside-item-color-hover;
+            fill: $theme-aside-item-color-hover;
+            background: $theme-aside-item-background-color-hover;
+            i {
+              color: $theme-aside-item-color-hover;
+            }
+          }
+          &:focus {
+            color: $theme-aside-item-color-focus;
+            fill: $theme-aside-item-color-focus;
+            background: $theme-aside-item-background-color-focus;
+            i {
+              color: $theme-aside-item-color-focus;
+            }
+          }
+          &.is-active {
+            color: $theme-aside-item-color-active;
+            fill: $theme-aside-item-color-active;
+            background: $theme-aside-item-background-color-active;
+            i {
+              color: $theme-aside-item-color-active;
+            }
+          }
+        }
+      }
+      .el-submenu {
+        .el-submenu__title {
+          color: $theme-aside-item-color;
+          background: $theme-aside-item-background-color;
+          i {
+            color: $theme-aside-item-color;
+          }
+          .el-submenu__icon-arrow {
+            color: $theme-aside-item-color;
+          }
+          &:hover {
+            color: $theme-aside-item-color-hover;
+            background: $theme-aside-item-background-color-hover;
+            i {
+              color: $theme-aside-item-color-hover;
+            }
+            .el-submenu__icon-arrow {
+              color: $theme-aside-item-color-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ps-theme-container-main {
+    // 主体部分分为多页面控制器 和主体
+    .ps-theme-container-main-header {
+      // 多页面控制器
+      .ps-multiple-page-control {
+        .el-tabs__header.is-top {
+          border-bottom-color: $theme-multiple-page-control-border-color;
+        }
+        .el-tabs__nav {
+          border-color: $theme-multiple-page-control-border-color;
+          .el-tabs__item {
+            // width: 100px;
+            // text-align: center;
+            @extend %unable-select;
+            color: $theme-multiple-page-control-color;
+            background-color: $theme-multiple-page-control-background-color;
+            border-left-color: $theme-multiple-page-control-border-color;
+            &:first-child {
+              border-left: none;
+              &:hover {
+                padding: 0px 20px;
+              }
+              .el-icon-close {
+                display: none;
+              }
+            }
+          }
+          .el-tabs__item.is-active {
+            color: $theme-multiple-page-control-color-active;
+            background-color: $theme-multiple-page-control-background-color-active;
+            border-bottom-color: $theme-multiple-page-control-border-color-active;
+          }
+        }
+        %el-tabs__nav {
+          font-size: 20px;
+        }
+        .el-tabs__nav-prev {
+          @extend %el-tabs__nav;
+          color: $theme-multiple-page-control-nav-prev-color;
+        }
+        .el-tabs__nav-next {
+          @extend %el-tabs__nav;
+          color: $theme-multiple-page-control-nav-next-color;
+        }
+      }
+      // 多页控制器的关闭控制
+      .ps-multiple-page-control-btn {
+        .el-dropdown {
+          .el-button-group {
+            .el-button {
+              border-color: $theme-multiple-page-control-border-color;
+            }
+          }
+        }
+      }
+    }
+    // 主体
+    .ps-theme-container-main-body {
+      // 布局组件
+      .container-component {
+        // [组件]
+        // d2-container-full 填充型
+        .ps-container-full {
+          border: $theme-container-border-outer;
+          border-top: none;
+          border-bottom: none;
+          .ps-container-full__header {
+            // border-bottom: $theme-container-border-inner;
+            background: $theme-container-header-footer-background-color;
+          }
+          .ps-container-full__body {
+            background: $theme-container-background-color;
+
+            .ps-table {
+
+            }
+            .ps-table-head {
+              th, tr {
+                background: $theme-table-header-color;
+                color: #fff;
+                height: 40px;
+                color: #b0bac5;
+                font-size: 12px;
+                // color: #606266;
+                // background: #f2f2f2;
+                // color: #000;
+              }
+            }
+          }
+          .ps-container-full__footer {
+            border-top: $theme-container-border-inner;
+            background: $theme-container-header-footer-background-color;
+          }
+        }
+      }
+    }
+  }
+}
